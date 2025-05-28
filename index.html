@@ -54,6 +54,20 @@
     iframe {
       border-radius: 12px;
     }
+    .music-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      background-color: #e4c9a4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
@@ -61,7 +75,11 @@
     <h1>Forever My Hearth till Jannah</h1>
   </header>
 
-  <audio autoplay loop>
+  <!-- Tombol untuk memulai musik -->
+  <button class="music-button" onclick="playAudio()">Nyalakan Musik</button>
+
+  <!-- Elemen audio tanpa autoplay -->
+  <audio id="bg-music" loop>
     <source src="lagu latar belakang.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -99,6 +117,13 @@
   </section>
 
   <script>
+    function playAudio() {
+      var audio = document.getElementById('bg-music');
+      audio.play().catch(function(e) {
+        alert('Browser tidak mengizinkan autoplay. Silakan coba lagi.');
+      });
+    }
+
     var disqus_config = function () {
       this.page.url = window.location.href;
       this.page.identifier = 'forever-my-hearth';
