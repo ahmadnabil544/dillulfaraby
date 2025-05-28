@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forever My Hearth till Jannah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f7f0e8;
+      color: #3e3e3e;
+    }
+    header {
+      background-color: #e4c9a4;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Forever My Hearth till Jannah</h1>
+  </header>
+
+  <audio autoplay loop>
+    <source src="lagu latar belakang.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <section>
+    <h2 style="text-align: center; font-family: 'Great Vibes', cursive;">Kenangan Indah</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Foto 1">
+      <img src="photo2.jpg" alt="Foto 2">
+      <img src="photo3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align: center; font-family: 'Great Vibes', cursive;">Video Spesial</h2>
+    <div class="video-container">
+      <video autoplay muted loop controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-container">
+      <video autoplay muted loop controls>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align: center; font-family: 'Great Vibes', cursive;">Tinggalkan Komentar</h2>
+    <div style="display: flex; justify-content: center;">
+      <div id="disqus_thread" style="width: 100%; max-width: 700px;"></div>
+    </div>
+  </section>
+
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = 'forever-my-hearth';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://forevermyhearth.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Silakan aktifkan JavaScript untuk melihat komentar.</noscript>
+</body>
+</html>
